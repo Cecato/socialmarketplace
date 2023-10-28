@@ -1,4 +1,5 @@
 import Navbar from "./components/navbar";
+import Card from "./components/card";
 
 export default function Home() {
   
@@ -6,9 +7,6 @@ export default function Home() {
     <>
     <main>
       <Navbar title="S.M.Place"></Navbar>
-      <div>
-        <h1> Olá, seja bem vindo(a)!</h1>
-      </div>
     </main>
     </>
   );
