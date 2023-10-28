@@ -1,6 +1,13 @@
 import Image from 'next/image';
 
-export default function Card({img, alt, text}: {img: string, alt:string, text:string}){
+type Props = {
+    img: string;
+    alt: string;
+    title: string;
+    text: string;
+}
+
+export default function Card({img, alt, title, text}: Props){
     return(
         <>
         <div>
