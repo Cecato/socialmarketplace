@@ -1,13 +1,20 @@
-import Navbar from "../components/navbar";
 import Card from "../components/card";
 
 export default function Home() {
   
   return (
     <>
-    <main>
-      <Navbar title="S.M.Place"></Navbar>
-    </main>
+      <main>      
+        <div>
+          <Card
+              img="/images/default.png"
+              alt="img"
+              title="Instagram"
+              text="Curtidas"
+              price="A partir de 2$"
+            />        
+        </div>
+      </main>
     </>
   );
 };
