@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import Navbar from '../components/navbar';
 
 type Props = {
   children: React.ReactNode;
@@ -18,6 +19,7 @@ export default function RootLayout({ children }: Props) {
     <html lang="en">
       <body className={inter.className}>
         <main>
+          <Navbar title="S.M.Place" />
           { children }
         </main>
       </body>

@@ -5,7 +5,6 @@ export default function Home() {
   
   return (
     <>
-      <Navbar title="S.M.Place"></Navbar>
     </>
   );
 };
