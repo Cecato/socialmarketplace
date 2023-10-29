@@ -7,83 +7,63 @@ export default function Home() {
     <>
       <main>      
         <div className="w-full h-screen bg-gray-200 flex flex-col p-5 items-center">
-          <div className="max-w-screen-xl h-screen border border-gray-300 bg-white rounded-md shadow-md w-full">
-            <Bar>
-              <Card
-                  imgSrc="/images/instagram.png"
-                  alt="img"
-                  title="Instagram"
-                  text="Curtidas"
-                  price="A partir de 2$"
-                /> 
+          <div className="max-w-screen-xl bg-white rounded-md shadow-md w-full">
+            <div className="border border-gray-300 p-4 flex flex-wrap justify-between">
+              <Bar>
                 <Card
-                  imgSrc="/images/tiktok.png"
-                  alt="img"
-                  title="Instagram"
-                  text="Curtidas"
-                  price="A partir de 2$"
-                />
-                <Card
-                  imgSrc="/images/instagram.png"
-                  alt="img"
-                  title="Instagram"
-                  text="Curtidas"
-                  price="A partir de 2$"
-                />  
-                <Card
-                  imgSrc="/images/instagram.png"
-                  alt="img"
-                  title="Instagram"
-                  text="Curtidas"
-                  price="A partir de 2$"
-                />
-                <Card
-                  imgSrc="/images/instagram.png"
-                  alt="img"
-                  title="Instagram"
-                  text="Curtidas"
-                  price="A partir de 2$"
-                />    
-            </Bar>
+                    imgSrc="/images/instagram.png"
+                    alt="img"
+                    title="Instagram"
+                    price="2"
+                  /> 
+                  <Card
+                    imgSrc="/images/youtube.png"
+                    alt="img"
+                    title="Instagram"
+                    price="2"
+                  />
+                  <Card
+                    imgSrc="/images/tiktok.png"
+                    alt="img"
+                    title="Instagram"
+                    price="2"
+                  />  
+                  <Card
+                    imgSrc="/"
+                    alt="img"
+                    title="Instagram"
+                    price="2"
+                  />   
+              </Bar>
 
-            <Bar>
-              <Card
-                  imgSrc="/images/instagram.png"
-                  alt="img"
-                  title="Instagram"
-                  text="Curtidas"
-                  price="A partir de 2$"
-                /> 
+              <Bar>
                 <Card
-                  imgSrc="/images/instagram.png"
-                  alt="img"
-                  title="Instagram"
-                  text="Curtidas"
-                  price="A partir de 2$"
-                />
-                <Card
-                  imgSrc="/images/instagram.png"
-                  alt="img"
-                  title="Instagram"
-                  text="Curtidas"
-                  price="A partir de 2$"
-                />  
-                <Card
-                  imgSrc="/images/instagram.png"
-                  alt="img"
-                  title="Instagram"
-                  text="Curtidas"
-                  price="A partir de 2$"
-                />
-                <Card
-                  imgSrc="/images/instagram.png"
-                  alt="img"
-                  title="Instagram"
-                  text="Curtidas"
-                  price="A partir de 2$"
-                />    
-            </Bar>
-          </div>     
+                    imgSrc="/images/instagram.png"
+                    alt="img"
+                    title="Instagram"
+                    price="2"
+                  /> 
+                  <Card
+                    imgSrc="/images/instagram.png"
+                    alt="img"
+                    title="Instagram"
+                    price="2"
+                  />
+                  <Card
+                    imgSrc="/images/instagram.png"
+                    alt="img"
+                    title="Instagram"
+                    price="2"
+                  />  
+                  <Card
+                    imgSrc="/images/instagram.png"
+                    alt="img"
+                    title="Instagram"
+                    price="2"
+                  /> 
+              </Bar>
+            </div>
+          </div>    
         </div>
       </main>
     </>

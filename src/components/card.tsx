@@ -6,7 +6,6 @@ type Props = {
     imgSrc: string;
     alt: string;
     title: string;
-    text: string;
     price: string;
 }
 
@@ -25,8 +24,8 @@ export default function Card({imgSrc, alt, title, price}: Props){
     return(
         <>
             <div className='w-64 p-4 border border-gray-300 shadow-md m-3'>
-                <div className='w-30 flex items-center justify-center pb-8 '>
-                    <div className={`transition-opacity duration-500 ease-in-out ${hovered ? 'opacity-70' : 'opacity-90'}`}
+                <div className='w-full h-48 max-h-48 flex items-center justify-center'>
+                    <div className={`flex items-center justify-center w-48 h-full transition-opacity duration-500 ease-in-out ${hovered ? 'opacity-100' : 'opacity-100'}`}
                         onMouseEnter={handleMouseEnter}
                         onMouseLeave={handleMouseLeave}
                         >
@@ -38,11 +37,18 @@ export default function Card({imgSrc, alt, title, price}: Props){
                     ></Image>
                     </div>
                 </div>
-                <div>
-                    <h1>{title}</h1>
+                <div className='text-center items-center justify-center m-4'>
+                    <h1 className='text-2xl'>{title}</h1>
                 </div>
-                <div>
-                    <h2>{price}</h2>
+                <div className='text-sm text-gray-500'>
+                    <h2>A partir de:</h2>
+                </div>
+                <div className='flex items-center'>
+                    <h2 className='text-xl'>R$</h2>
+                    <h1 className='text-3xl text-black'>{price}</h1>
+                </div>
+                <div className='text-sm text-gray-500'>
+                    <h2>Á vista no PIX</h2>
                 </div>
             </div>
         </>
