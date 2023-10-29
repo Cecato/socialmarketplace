@@ -25,10 +25,7 @@ export default function Card({imgSrc, alt, title, price}: Props){
         <>
             <div className='w-64 p-4 border border-gray-300 shadow-md m-3'>
                 <div className='w-full h-48 max-h-48 flex items-center justify-center'>
-                    <div className={`flex items-center justify-center w-48 h-full transition-opacity duration-500 ease-in-out ${hovered ? 'opacity-100' : 'opacity-100'}`}
-                        onMouseEnter={handleMouseEnter}
-                        onMouseLeave={handleMouseLeave}
-                        >
+                    <div className={`flex items-center justify-center w-48 h-full`} >
                     <Image
                         src={imgSrc}
                         alt={alt}
