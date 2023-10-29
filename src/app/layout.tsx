@@ -18,10 +18,12 @@ export default function RootLayout({ children }: Props) {
   return (
     <html lang="en">
       <body className={inter.className}>
+
         <main>
           <Navbar title="S.M.Place" />
           { children }
         </main>
+
       </body>
     </html>
   )

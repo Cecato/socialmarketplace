@@ -1,15 +1,16 @@
-import Image from 'next/image';
+import React, { useEffect } from "react";
 
-export default function Bar({img, alt, text}: {img: string, alt:string, text:string}){
+
+type Props = {
+    children: React.ReactNode;
+}
+
+export default function Bar({children}:Props){
+
     return(
         <>
-        <div>
-            <div>
-                <Image
-                    src={img}
-                    alt={alt}
-                />
-            </div>
+        <div className=" bg-clip-padding flex m-auto items-center justify-center mt-10">
+            {children}
         </div>
         </>
     )

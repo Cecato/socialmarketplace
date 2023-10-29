@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 :root{
 
 }
 
 body {
   color: rgb(15,15,15);
-  background: rgb(235,235,235);
+  background: rgb(253, 253, 253);
 }
