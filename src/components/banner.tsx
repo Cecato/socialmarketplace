@@ -9,7 +9,7 @@ export default function Bar({children}:Props){
 
     return(
         <>
-        <div className="bg-clip-padding flex m-4 items-center justify-center mt-10">
+        <div className="bg-clip-padding flex m-5 items-center justify-center mt-10">
             {children}
         </div>
         </>

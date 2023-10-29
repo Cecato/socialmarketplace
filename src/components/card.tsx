@@ -38,14 +38,16 @@ export default function Card({imgSrc, alt, title, price}: Props){
                     </div>
                 </div>
                 <div className='text-center items-center justify-center m-4'>
-                    <h1 className='text-2xl'>{title}</h1>
+                    <h1 className='text-2xl font-bold font-sans'>{title}</h1>
                 </div>
                 <div className='text-sm text-gray-500'>
                     <h2>A partir de:</h2>
                 </div>
                 <div className='flex items-center'>
-                    <h2 className='text-xl'>R$</h2>
-                    <h1 className='text-3xl text-black'>{price}</h1>
+                    <h2 className='text-2xl'>R$</h2>
+                    <div className='ml-2'>
+                        <h1 className='text-3xl text-black'>{price}</h1>
+                    </div>  
                 </div>
                 <div className='text-sm text-gray-500'>
                     <h2>Á vista no PIX</h2>
