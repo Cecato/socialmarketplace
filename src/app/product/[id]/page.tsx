@@ -1,25 +1,24 @@
 import CardProduct from "@/src/components/cardProduct";
-import CardOptions from "@/src/components/cardOption";
+import ProductSelectorContainer from "@/src/components/productSelector";
 
 export default function ProductPage() {
 
   return (
-    <>
-      <div className="w-full h-screen bg-white flex flex-col p-5 items-center">
-        <div className="max-w-screen-xl bg-white rounded-md shadow-md w-full">
-          <div className="border border-gray-300 p-4 flex flex-wrap justify-between">
-
-            <CardProduct
-              imgSrc="/images/instagram.png"
-              alt="/images/instagram.png"
-              title="Instagram"
-              />
-            
-            <CardOptions></CardOptions>
-
-          </div>
+    <div className="w-full h-screen bg-gray-100 flex flex-col p-5 pt-16 items-center">
+      <div className="max-w-screen-xl h-full bg-white shadow-sm w-full rounded-sm border
+      border-gray-300 p-4 flex flex-col justify-center">
+        <h1 className="text-xl font-bold h-[5%]">
+          Instagram
+        </h1>
+        <div className="w-full h-[90%] flex flex-col md:flex-row justify-center gap-4">
+          <CardProduct
+            imgSrc="/images/instagram.png"
+            alt="/images/instagram.png"
+            title="Instagram"
+          />
+          <ProductSelectorContainer />
         </div>
       </div>
-    </>
+    </div>
   );
 };
