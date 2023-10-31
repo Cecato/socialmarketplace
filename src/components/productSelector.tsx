@@ -1,3 +1,5 @@
+'use client';
+import { useCart } from 'react-use-cart';
 import Button from './input/button';
 import OptionSelector from './optionsSelector';
 
@@ -6,10 +8,18 @@ export default function ProductSelectorContainer( ){
     const services = [
         1,2,3,4,5,6
     ]
+    
+    const { addItem } = useCart();
+
+    //placeholder
+    const product = {
+        id: '1',
+        price: 100
+    }
 
     return(
         <div className='md:w-1/2 md:h-full h-1/2 border border-gray-300 rounded-md p-2 flex
-        flex-col justify-between'>
+        flex-col justify-between shadow-md'>
             <div className='flex flex-col gap-4'>
                 <div>
                     <h1 className='font-semibold'>
@@ -50,7 +60,9 @@ export default function ProductSelectorContainer( ){
                     </p>
                 </div>
                 <div className='w-1/2'>
-                    <Button />
+                    <Button
+                        onClick={() => addItem(product)}
+                    />
                 </div>
             </div>
         </div>
