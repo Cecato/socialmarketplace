@@ -1,8 +1,9 @@
 import Bar from "../components/banner";
 import Card from "../components/card";
 
+
 export default function Home() {
-  
+
   return (
     <>
       <main>      
