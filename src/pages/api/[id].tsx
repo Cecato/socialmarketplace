@@ -26,7 +26,7 @@ async function run( filterName : string) {
         //await cursor.forEach((doc: any) => console.dir(doc));
         const results = await ratings.find(filter).toArray();
 
-        return results;
+        return { data: results };
     } finally {
      
         await client.close();
