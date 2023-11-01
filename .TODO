@@ -1,12 +1,20 @@
 Create/
     HomePage/
-        Header[]
-        Card Product[]
-        Products[]
+        Header[X]
+        Card Product[X]
+        Products[X]
     ProductPage/
-        Product[]
-        Quantity[]
-        Type[]
-        Whatzap message send[]
+        Product[X]
+        Quantity[X]
+        Type[X]
+        Whatzap message send[X]
+
+O produto deve ter:
+    Nome ( Instagram )
+    Imagem  (instagram.png)
+    Preço por Serviço ( R$2,00 por 50 seguidores )
+    Serviço ( seguidores, curtidas...)
+    Arroba ( @nome_etc )
+    Link ( www.instagram/nome )
 
 
