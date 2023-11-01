@@ -21,12 +21,21 @@ async function run( filterName : string) {
         const ratings = database.collection("product");
 
         const filter = { name: filterName};
-        //const cursor = ratings.find(filter);
 
-        //await cursor.forEach((doc: any) => console.dir(doc));
-        const results = await ratings.find(filter).toArray();
+        const result = await ratings.findOne(filter, {
+            projection: {
+                _id: 1,
+                name: 1,
+                services: 1
+            }
+        });
+      
+        if (result) {
+            return result;
+        } else {
+            throw new Error("Documento não encontrado");
+        }
 
-        return { data: results };
     } finally {
      
         await client.close();
