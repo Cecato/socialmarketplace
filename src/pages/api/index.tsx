@@ -12,21 +12,16 @@ const client = new MongoClient(uri, {
     }
 });
 
-async function run( filterName : string) {
+async function run() {
     try {
       
         await client.connect();
 
         const database = client.db("smp");
         const ratings = database.collection("product");
+        const results = await ratings.find({}).toArray();
 
-        const filter = { name: filterName};
-        //const cursor = ratings.find(filter);
-
-        //await cursor.forEach((doc: any) => console.dir(doc));
-        const results = await ratings.find(filter).toArray();
-
-        return { data: results };
+        return results;
     } finally {
      
         await client.close();
@@ -36,9 +31,9 @@ async function run( filterName : string) {
 
  
 export default async function handler(req: NextApiRequest, res: NextApiResponse){
-    const filterName = req.query.id as string;
+    
     try {
-        const results = await run(filterName);
+        const results = await run();
         res.status(200).json(results);
     } catch (error) {
         console.error(error);
