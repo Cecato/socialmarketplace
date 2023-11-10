@@ -15,11 +15,11 @@ export default function Card({imgSrc, alt, title, price}: Props){
     return(
         <>
             <Link href={`/product/${title}`}>
-            <div className='w-64 p-4 border border-gray-300 shadow-md m-3'>
+            <div className='w-55 p-2 border border-gray-300 shadow-md'>
                 
                 
-                <div className='w-full h-48 max-h-48 flex items-center justify-center'>
-                    <div className={`flex items-center justify-center w-48 h-full`} >
+                <div className='w-full h-20 max-h-30 flex items-center justify-center'>
+                    <div className={`flex items-center justify-center w-20 h-full`} >
                     <Image
                         src={imageSource}
                         alt={alt}
@@ -29,14 +29,14 @@ export default function Card({imgSrc, alt, title, price}: Props){
                     </div>
                 </div>
                 <div className='text-center items-center justify-center m-4'>
-                    <h1 className='text-2xl font-bold font-sans'>{title}</h1>
+                    <h1 className='text-xl font-bold font-sans'>{title}</h1>
                 </div>
                 <div className='m-1'>
                     <div className='text-sm text-gray-500'>
                         <h2>A partir de:</h2>
                     </div>
                     <div className='flex items-center'>
-                        <h2 className='text-2xl'>R$</h2>
+                        <h2 className='text-xl'>R$</h2>
                         <div className='ml-2'>
                             <h1 className='text-3xl text-black'>{price}</h1>
                         </div>  
@@ -46,7 +46,7 @@ export default function Card({imgSrc, alt, title, price}: Props){
                     </div>
                 </div>
                 <div className='text-center items-center justify-center mt-5'>
-                    <button className='text-2xl border border-blue-500 text-blue-500 font-bold py-2 px-4 rounded hover:bg-blue-500 hover:text-white'>Comprar</button>  
+                    <button className='text-xl border border-blue-500 text-blue-500 font-bold py-2 px-4 rounded hover:bg-blue-500 hover:text-white'>Ver mais</button>  
                 </div>
                 
             
