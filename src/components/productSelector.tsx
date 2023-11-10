@@ -2,20 +2,34 @@
 import { useCart } from 'react-use-cart';
 import Button from './input/button';
 import OptionSelector from './optionsSelector';
+import { useEffect, useState } from 'react';
 
-export default function ProductSelectorContainer( ){
-    //placeholder
-    const services = [
-        1,2,3,4,5,6
-    ]
-    
-    const { addItem } = useCart();
-
-    //placeholder
-    const product = {
-        id: '1',
-        price: 100
+type Props = {
+    product: {
+        name: string;
+        services: Service[];
     }
+}
+
+type Service = {
+    name: string;
+    price: number;
+}
+
+export default function ProductSelectorContainer({ product }: Props){
+    const [selectedService, setSelectedService] = useState<Service>();
+    const [selectedQuantity, setSelectedQuantity] = useState<number>();
+
+    const quantity = [
+        100, 200, 500, 1000, 10000
+    ]
+
+    useEffect(()=>{
+        console.log(selectedService, selectedQuantity);
+
+    }, [selectedService, selectedQuantity])
+
+    const { addItem } = useCart();
 
     return(
         <div className='md:w-1/2 md:h-full h-1/2 border border-gray-300 rounded-md p-2 flex
@@ -26,10 +40,15 @@ export default function ProductSelectorContainer( ){
                         Serviços
                     </h1>
                     <div className='flex flex-wrap gap-2'>
-                        {services.map((service, index) => {
+                        {product?.services.map((service, index) => {
                             return(
-                                <div key={index}>
-                                    <OptionSelector textOption='Seguidores'/>
+                                <div key={service.name}>
+                                    <OptionSelector 
+                                        textOption={service.name}
+                                        onClick={setSelectedService}
+                                        data={service}
+                                        selected={selectedService}
+                                    />
                                 </div>
                             )
                         })}
@@ -40,20 +59,35 @@ export default function ProductSelectorContainer( ){
                         Quantidade
                     </h1>
                     <div className='flex flex-wrap gap-2'>
-                        {services.map((service, index) => {
+                        {quantity.map((quantity) => {
                             return(
-                                <div key={index}>
-                                    <OptionSelector textOption='1000'/>
+                                <div key={quantity}>
+                                    <OptionSelector 
+                                        textOption={quantity.toString()}
+                                        onClick={setSelectedQuantity}
+                                        data={quantity}
+                                        selected={selectedQuantity}
+                                    />
                                 </div>
                             )
                         })}
                     </div>
                 </div>
+                    <h1 className='font-semibold'>
+                        Link da sua conta
+                    </h1>
+                    <input
+                        className='border border-gray-300 rounded-md p-2 w-full'
+                        placeholder='https://instagram.com/...'
+                    />
             </div>
             <div className='flex justify-around'>
                 <div className='w-1/2'>
                     <h1 className='text-left font-bold text-2xl'>
-                        R$ 100,00
+                        R$
+                        {selectedService && selectedQuantity &&
+                            selectedService?.price * selectedQuantity / 100
+                        }
                     </h1>
                     <p className='text-left text-gray-500 text-sm'>
                         À vista no PIX
@@ -61,7 +95,7 @@ export default function ProductSelectorContainer( ){
                 </div>
                 <div className='w-1/2'>
                     <Button
-                        onClick={() => addItem(product)}
+                        onClick={() => console.log(product)}
                     />
                 </div>
             </div>
