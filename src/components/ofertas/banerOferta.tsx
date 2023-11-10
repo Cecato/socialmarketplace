@@ -30,9 +30,9 @@ export default function Baner(props: BannerProps){
     };
   
     useEffect(() => {
-      const targetFollowerCount = 800; // Valor final desejado para seguidores
-      const targetLikeCount = 500; // Valor final desejado para curtidas
-      const targetViewCount = 900; // Valor final desejado para visualizações
+      const targetFollowerCount = 800;
+      const targetLikeCount = 500;
+      const targetViewCount = 900;
   
       animateCount(followerCount, targetFollowerCount, setFollowerCount);
       animateCount(likeCount, targetLikeCount, setLikeCount);
