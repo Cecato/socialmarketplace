@@ -14,7 +14,7 @@ export default function Navbar({ title }: Props){
                 className=""
             >
                 <h1 className="text-white text-lg font-semibold">
-                    { title }
+                    { title } 👌
                 </h1>
             </Link>
             <Link href={''}>

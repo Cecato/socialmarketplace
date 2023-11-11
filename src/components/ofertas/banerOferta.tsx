@@ -41,42 +41,37 @@ export default function Baner(props: BannerProps){
 
     return(
         <div className='w-full h-auto flex bg-gradient-to-r from-purple-600 to-indigo-700'>
-            <div className=" text-white p-16 w-auto">
-                <div className="ml-6 container mx-auto flex flex-col md:flex-row items-center justify-between">
+            <div className="text-white pt-16 p-4">
+                <div className="pl-6 container mx-auto flex flex-col md:flex-row items-center justify-between">
                     <div className="md:w-2/3">
-                    <h1 className="text-4xl font-bold mb-4">Impulsione suas Redes Sociais!</h1>
-                    <p className="text-lg mb-6">
-                        Compre Curtidas, Seguidores, Comentários e Mais para o Sucesso Online.
-                    </p>
-                    <span className="text-sm">
-                        Sua rede será impulsionada em poucos minutos!
-                    </span>
-                    </div>
-                </div>
-                <div className="p-4 rounded-lg w-1/5 flex">
-                    <div className="ml-6">
-                        <div className='flex'>
-                            <div className="text-2xl font-bold">{Math.round(followerCount)}</div>
-                            <div className="arrow-up text-2xl ml-4">&#8593;</div>
-                            
-                        </div>
-                        <div className="text-gray-400">Seguidores</div>
-                        
-                    </div>
-                    <div className="ml-10">
-                        <div className='flex'>
-                            <div className="text-2xl font-bold">{Math.round(likeCount)}</div>
-                            <div className="arrow-up text-2xl ml-4">&#8593;</div>
-                        </div>
-                        <div className="text-gray-400">Curtidas</div>
-                    </div>
+                        <h1 className="text-4xl font-bold mb-4">
+                            Impulsione suas Redes Sociais! 
+                            <span className='text-3xl p-2'>
+                                📈
+                            </span>
+                        </h1>
+                        <p className="text-lg mb-6">
+                            Compre Curtidas, Seguidores, Comentários e Mais para o Sucesso Online.
+                        </p>
+                        <div className='flex gap-4'>
+                            <div className='w-full'>
+                                <span className='text-xl'> { followerCount } </span>
+                                <span className='text-xl'> &#8593; </span>
+                                <p className='text-gray-300 text-sm'> Seguidores </p>
+                            </div>
 
-                    <div className="ml-10">
-                        <div className='flex'>
-                            <div className="text-2xl font-bold">{Math.round(viewCount)}</div>
-                            <div className="arrow-up text-2xl ml-4">&#8593;</div>
+                            <div className='w-full'>
+                                <span className='text-xl'> { likeCount } </span>
+                                <span className='text-xl'> &#8593; </span>
+                                <p className='text-gray-300 text-sm'> Likes </p>
+                            </div>
+
+                            <div className='w-full'>
+                                <span className='text-xl'> { viewCount } </span>
+                                <span className='text-xl'> &#8593; </span>
+                                <p className='text-gray-300 text-sm'> Vizualizações </p>
+                            </div>
                         </div>
-                        <div className="text-gray-400">Visualizações</div>
                     </div>
                 </div>
             </div>

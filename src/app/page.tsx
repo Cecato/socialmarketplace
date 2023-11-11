@@ -39,18 +39,20 @@ export default function Home() {
       <Baner />
       <div className="max-w-screen-xl p-4">
         <div className="w-full flex flex-wrap gap-2 justify-center">
-          {products?.map((product)=>{
-            return(
-              <div key={product.id}>
-                <Card
-                  imgSrc={`/images/${product.name}.png`}
-                  alt="produto"
-                  title={product.name}
-                  price={product.services[0].price}
-                />
-              </div>
-            )
-          })}
+          {products &&
+            products.map((product)=>{
+              return(
+                <div key={product.id}>
+                  <Card
+                    imgSrc={`/images/${product.name}.png`}
+                    alt="produto"
+                    title={product.name}
+                    price={product.services[0].price}
+                  />
+                </div>
+              )
+            })
+          }
         </div>
       </div>
       <div className="h-20"/>
