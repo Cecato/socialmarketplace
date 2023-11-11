@@ -40,7 +40,6 @@ export default function Baner(props: BannerProps){
     }, []);
 
     return(
-        <>
         <div className='w-full h-auto flex bg-gradient-to-r from-purple-600 to-indigo-700'>
             <div className=" text-white p-16 w-auto">
                 <div className="ml-6 container mx-auto flex flex-col md:flex-row items-center justify-between">
@@ -49,6 +48,9 @@ export default function Baner(props: BannerProps){
                     <p className="text-lg mb-6">
                         Compre Curtidas, Seguidores, Comentários e Mais para o Sucesso Online.
                     </p>
+                    <span className="text-sm">
+                        Sua rede será impulsionada em poucos minutos!
+                    </span>
                     </div>
                 </div>
                 <div className="p-4 rounded-lg w-1/5 flex">
@@ -61,7 +63,6 @@ export default function Baner(props: BannerProps){
                         <div className="text-gray-400">Seguidores</div>
                         
                     </div>
-
                     <div className="ml-10">
                         <div className='flex'>
                             <div className="text-2xl font-bold">{Math.round(likeCount)}</div>
@@ -79,10 +80,6 @@ export default function Baner(props: BannerProps){
                     </div>
                 </div>
             </div>
-            <div className='w-50 p-2 border border-gray-300 shadow-md bg-black'>
-
-            </div>
         </div>
-        </>
     );
 }

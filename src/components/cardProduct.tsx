@@ -16,8 +16,8 @@ export default function CardProduct({imgSrc, alt, title}: Props){
             <Image
                 src={imageSource}
                 alt={alt}
-                width={100}
-                height={100}
+                width={1000}
+                height={1000}
                 className='object-contain w-full h-full p-2'
             />
         </div>
